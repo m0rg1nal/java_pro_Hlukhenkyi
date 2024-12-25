@@ -1,4 +1,4 @@
-package app;
+package hw1;
 
 public class Main {
     private static double CONV_K = 2.20462;
