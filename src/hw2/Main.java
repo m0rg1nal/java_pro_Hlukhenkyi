@@ -12,8 +12,11 @@ public class Main {
         String unit = input.split(" ")[1].toLowerCase();
         double distance = Double.parseDouble(dist);
         double result = 0;
-
-        if (unit.equals("miles")){
+        if (unit.equals("km")){
+            result = convertKmToMiles(distance);
+            unit = "miles";
+        }
+        else if (unit.equals("miles")){
             result = convertMilesToKm(distance);
             unit = "km";
         }
@@ -22,5 +25,9 @@ public class Main {
 
     private static double convertMilesToKm(double miles){
         return miles * CONV_DIST;
+    }
+
+    private static double convertKmToMiles(double km){
+        return km / CONV_DIST;
     }
 }
