@@ -1,4 +1,12 @@
 package additionalHomework1;
 
-public class Box {
+import java.util.ArrayList;
+
+public class Box <Fruit> {
+    ArrayList<Fruit> contains;
+
+    public void addFruit(Fruit f){
+        contains.add(f);
+    }
+
 }
